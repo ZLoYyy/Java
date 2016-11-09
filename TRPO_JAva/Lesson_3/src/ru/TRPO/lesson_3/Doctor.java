@@ -5,5 +5,5 @@ package ru.TRPO.lesson_3;
  */
 public interface Doctor {
 
-    void take(String patient);
+    void take(Patient patient);
 }

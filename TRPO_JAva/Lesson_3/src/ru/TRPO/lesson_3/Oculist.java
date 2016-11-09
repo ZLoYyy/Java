@@ -5,7 +5,9 @@ package ru.TRPO.lesson_3;
  */
 class Oculist implements Doctor {
     @Override
-    public void take(String patient) {
-
+    public void take(Patient patient) {
+        System.out.println("Окулист принимает пациента");
+        patient = new Patient();
+        patient.getEye();
     }
 }

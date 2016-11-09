@@ -5,7 +5,11 @@ package ru.TRPO.lesson_3;
  */
 class ENT implements Doctor {
     @Override
-    public void take(String patient) {
-
+    public void take(Patient patient) {
+        System.out.println("ЛОР принимает пациента");
+        patient = new Patient();
+        patient.getEar();
+        patient.getNose();
+        patient.getThroat();
     }
 }
