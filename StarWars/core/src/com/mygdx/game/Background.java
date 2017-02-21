@@ -15,7 +15,7 @@ public class Background {
         positionX = 0.0f;
     }
 
-    public void Render(SpriteBatch batch) {
+    public void render(SpriteBatch batch) {
 
         batch.draw(texture, positionX, 0);
         batch.draw(texture, 1280 + positionX, 0);
