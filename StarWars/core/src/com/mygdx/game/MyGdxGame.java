@@ -9,12 +9,17 @@ public class MyGdxGame extends ApplicationAdapter {
 	SpriteBatch batch;
 	Background background;
 	Hero hero;
+	Asteroid[] asteroids;
 	
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
 		background = new Background();
 		hero = new Hero();
+		asteroids = new Asteroid[30];
+		for (int i = 0; i < asteroids.length; i++) {
+			asteroids[i] = new Asteroid();
+		}
 	}
 
 	@Override
@@ -25,12 +30,18 @@ public class MyGdxGame extends ApplicationAdapter {
 		batch.begin();
 		background.render(batch);
 		hero.render(batch);
+		for (int i = 0; i < asteroids.length; i++) {
+			asteroids[i].render(batch);
+		}
 		batch.end();
 	}
 
 	public void update() {
 		background.update();
 		hero.update();
+		for (int i = 0; i < asteroids.length; i++) {
+			asteroids[i].update();
+		}
 	}
 	
 	@Override
