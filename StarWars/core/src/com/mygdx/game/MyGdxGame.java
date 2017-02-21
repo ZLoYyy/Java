@@ -18,11 +18,16 @@ public class MyGdxGame extends ApplicationAdapter {
 
 	@Override
 	public void render () {
+		update();
 		Gdx.gl.glClearColor(1, 1, 1, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		batch.begin();
 		background.Render(batch);
 		batch.end();
+	}
+
+	public void update() {
+		background.update();
 	}
 	
 	@Override
