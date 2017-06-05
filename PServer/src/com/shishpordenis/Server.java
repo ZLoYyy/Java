@@ -7,15 +7,21 @@ import java.net.InetSocketAddress;
 
 public class Server {
 
+    private static int port = 8765;
+
     public static void main(String[] args) throws IOException {
-        int port = 8765;
+
+
 
         HttpServer server = HttpServer.create();
         server.bind(new InetSocketAddress(port), 0);
-
-        server.createContext("/", new Viewer());
+        server.createContext("/", new ViewController());
+//        server.createContext("/print", (HttpHandler) new Printers());
         server.start();
 
         System.out.println("Server started localhost:" + port);
+
     }
+
+
 }
