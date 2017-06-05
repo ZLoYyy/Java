@@ -27,7 +27,6 @@ public class Printers {
 
         for(PrintService printer: printServices){
             array.add(printer.getName());
-
         }
 
         root.put("printers", array);
@@ -39,8 +38,8 @@ public class Printers {
         return getPrinters;
     }
 
-    public static void print() throws Exception {
-        PDDocument document = PDDocument.load(new File("R:/Temp/Pioneer.pdf"));
+    public static void print(String pafName) throws Exception {
+        PDDocument document = PDDocument.load(new File(pafName));
 
 //        PrintService myPrintService = findPrintService("EPSON TX117_119 Series");
 
