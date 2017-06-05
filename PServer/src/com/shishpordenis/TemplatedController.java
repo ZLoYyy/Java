@@ -34,8 +34,6 @@ public abstract class TemplatedController implements HttpHandler {
         Map root = new HashMap();
         root.put("printers", printer);
 //        Product latest = new Product();
-//        latest.setUrl("products/greenmouse.html");
-//        latest.setName("green mouse");
 //        root.put("latestProduct", latest);
         Writer out = new OutputStreamWriter(System.out);
         template.process(root, out);
