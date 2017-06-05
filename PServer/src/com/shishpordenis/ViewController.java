@@ -19,8 +19,6 @@ public class ViewController extends TemplatedController {
     @Override
     public void handle(HttpExchange httpExchange) throws IOException {
         Executor executor = new Executor();
-        System.out.println("124");
-
 
         try {
 
