@@ -22,7 +22,7 @@ public abstract class TemplatedController implements HttpHandler {
 
     public TemplatedController() throws IOException {
         configuration = new Configuration(Configuration.VERSION_2_3_25);
-        configuration.setDirectoryForTemplateLoading(new File("./templates"));
+        configuration.setDirectoryForTemplateLoading(new File("./Templates"));
         configuration.setDefaultEncoding("UTF-8");
         configuration.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER);
         configuration.setLogTemplateExceptions(false);
